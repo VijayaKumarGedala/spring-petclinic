@@ -31,7 +31,7 @@ jobs:
           password: Cloud@9456
           
       - name: Push Docker Image
-        run: docker push {{ secrets.USERNAME }} /<your-image-name>:2.0
+        run: docker push {vijaysiri048@gmail.com /spc-pet:2.0
             
 
 
