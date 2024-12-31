@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.PASSWORD }} 
           
       - name: Push Docker Image
-        run: docker push <your-dockerhub-username>/<your-image-name>:2.0
+        run: docker push {{ secrets.USERNAME }} /<your-image-name>:2.0
             
 
 
