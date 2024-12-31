@@ -32,7 +32,7 @@ jobs:
           
       - name: Push Docker Image
         run: docker push docker.io/my-organization/my-app:${{ github.sha }}
-
+             docker push docker.io/my-organization/my-app:1.0
 
             
 
