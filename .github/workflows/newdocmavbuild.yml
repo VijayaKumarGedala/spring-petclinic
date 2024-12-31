@@ -31,8 +31,8 @@ jobs:
           password: Cloud@9456
           
       - name: Push Docker Image
-        run: docker push docker.io/my-organization/my-app:${{ github.sha }}
-             docker push docker.io/my-organization/my-app:1.0
+        run: docker push docker.io/my-organization/my-app:2.0
+             
 
             
 
