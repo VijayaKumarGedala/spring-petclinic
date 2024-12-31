@@ -22,7 +22,7 @@ jobs:
           image-ref: 'docker.io/my-organization/my-app:${{ github.sha }}'
 
       - name: Check Trivy results
-        run: cat trivy-results.tx
+        run: cat trivy-results.txt
   
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
