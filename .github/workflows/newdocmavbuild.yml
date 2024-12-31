@@ -31,7 +31,8 @@ jobs:
           password: Cloud@9456
           
       - name: Push Docker Image
-        run: docker push vijaysiri048/spc-pet:2.0
+        run: docker push docker.io/my-organization/my-app:${{ github.sha }}
+
 
             
 
