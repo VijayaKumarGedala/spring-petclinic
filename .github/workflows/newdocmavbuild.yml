@@ -27,8 +27,8 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.USERNAME }} 
-          password: ${{ secrets.PASSWORD }} 
+          username: vijaysiri048@gmail.com
+          password: Cloud@9456
           
       - name: Push Docker Image
         run: docker push {{ secrets.USERNAME }} /<your-image-name>:2.0
