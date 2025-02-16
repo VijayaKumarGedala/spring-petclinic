@@ -18,8 +18,7 @@
 
 
 ---
-pool: Default
-
+pool: ubuntu:latest
 
 trigger: none
 
@@ -31,18 +30,18 @@ steps:
     inputs:
       SonarCloud: SONAR_CLOUD
       scannerMode: other
-      organization: dec24
+      organization: dev.azure.com/vijaysiri048
   - task: Maven@4
     inputs:
       mavenPomFile: pom.xml
       goals: package
       publishJUnitResults: true
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
-      #jdkVersionOption: "1.17"
+      jdkVersionOption: "1.17" 
       sonarQubeRunAnalysis: true
   - task: CopyFiles@2
     inputs:
-      contents: '**/spring-petclinic*.jar'
+      contents: 'target/spring-petclinic*.jar' 
       targetFolder: $(Build.ArtifactStagingDirectory)
   - task: PublishBuildArtifacts@1
     inputs:
@@ -52,4 +51,5 @@ steps:
   - task: SonarCloudPublish@3
     inputs:
       pollingTimeoutSec: '300'
+
 
