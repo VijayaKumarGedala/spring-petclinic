@@ -21,10 +21,17 @@ jobs:
       - name: Build with Maven
         run: mvn clean package
 
-      # - name: Test with Maven 
-      #   run: mvn test
-        
-      # - name: Package with Maven
-      #   run: mvn package
+      - name: Prepare artifacts
+        run: |
+          mkdir staging
+          cp target/*.jar staging
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: staging
+
+
 
 
